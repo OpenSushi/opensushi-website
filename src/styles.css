@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap");
+@import "tailwindcss";
+
+:root {
+  font-family: "Yusei Magic", "Hiragino Kaku Gothic ProN", "Avenir Next",
+    "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  --bg-1: #fff3e7;
+  --bg-2: #ffd7be;
+  --text: #352417;
+  --plate-1: #fff9f0;
+  --plate-2: #ffe5ce;
+  min-height: 100vh;
+  color: var(--text);
+  background: radial-gradient(circle at 8% 10%, #ffffff90 0%, #ffffff00 44%),
+    radial-gradient(circle at 86% 92%, #ffb98f65 0%, #ffb98f00 38%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 2rem 1rem 3rem;
+  transition: background 260ms ease, color 260ms ease;
+}
+
+.page[data-theme="dark"] {
+  --bg-1: #151011;
+  --bg-2: #2a1914;
+  --text: #ffe4cf;
+  --plate-1: #3a2c23;
+  --plate-2: #271d17;
+}
+
+.themeToggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  border: 1px solid #ffffff40;
+  border-radius: 9999px;
+  color: inherit;
+  background: #00000020;
+  backdrop-filter: blur(8px);
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.hero {
+  width: min(1000px, 100%);
+  margin-top: clamp(0.5rem, 1.4vw, 1rem);
+  padding: clamp(0.5rem, 1.5vw, 0.9rem);
+}
+
+.hero video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.25rem;
+  border: 1px solid #ffffff26;
+  box-shadow: 0 24px 52px #00000045, inset 0 0 0 1px #ffffff1f;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 7.2vw, 5.8rem);
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 0.95;
+}
+
+.copy {
+  margin-top: 0;
+  text-align: center;
+}
+
+.copy p {
+  margin: 0.45rem 0 0;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  opacity: 0.82;
+}
+
+.copy h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4.6vw, 3rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.copy p a {
+  color: inherit;
+  text-underline-offset: 0.22em;
+}
+
+.emailLink {
+  display: inline-block;
+  margin-top: 0.45rem;
+  color: inherit;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  text-underline-offset: 0.22em;
+  opacity: 0.9;
+}

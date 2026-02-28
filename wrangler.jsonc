@@ -1,0 +1,43 @@
+{
+	"name": "opensushi-website",
+	"compatibility_date": "2026-02-27",
+	"assets": {
+		"directory": "./dist",
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "single-page-application"
+	},
+	"observability": {
+		"logs": {
+			"enabled": true,
+			"invocation_logs": true
+		}
+	},
+	"send_metrics": false,
+	"routes": [
+		{
+			"pattern": "opensushi.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "opensushi.ai",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.opensushi.com",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.opensushi.ai",
+			"custom_domain": true
+		},
+		{
+			"pattern": "mta-sts.opensushi.ai",
+			"custom_domain": true
+		},
+		{
+			"pattern": "mta-sts.opensushi.com",
+			"custom_domain": true
+		}
+	],
+	"images": { "binding": "IMAGES" }
+}
