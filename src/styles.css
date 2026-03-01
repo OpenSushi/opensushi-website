@@ -105,6 +105,17 @@ h1 {
 .copy p a {
   color: inherit;
   text-underline-offset: 0.22em;
+  text-decoration: none;
+  transition: color 200ms ease, text-decoration 200ms ease;
+}
+
+.copy p a:hover {
+  color: #ff6b35;
+  text-decoration: underline;
+}
+
+.page[data-theme="dark"] .copy p a:hover {
+  color: #ffb98f;
 }
 
 .emailLink {
